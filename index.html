@@ -155,11 +155,13 @@
       <section class="news">
         <div class="news__wrapper">
           <h2 class="news__title">Новости и акции</h2>
+          <!-- Каждая новость является пунктом списка, а контент новости — ссылкой на всю новость. Здесь показано только превью новости. -->
           <ul class="news__list">
             <li class="news__item">
               <a class="news__link" href="#">
                 <time class="news__date" datetime="2017-09-29">
                   <b class="news__day">29</b> сент
+                  <!-- Давайте разметим дату. Для даты отлично подходит тег <time>. По макету число должно быть полужирным, поэтому обернём его в <b>. Само число обозначает день, и для этого есть хорошее слово — day. -->
                 </time>
                 <p class="news__text">
                   Нам наконец-то завезли Егермейстер! Теперь вы можете
@@ -197,16 +199,12 @@
       <section class="reviews">
         <div class="reviews__wrapper slider">
           <h2 class="reviews__title">Отзывы о нас</h2>
+          <!-- Добавим ссылку «Оставить свой». На планшете ссылка идёт сразу после заголовка. Возьмём за основу .button  и примиксуем к .reviews__write. Логика точно такая же, как и раньше: .button отвечает за то, как выглядит кнопка, а .reviews__write — за местоположение в блоке отзывов. -->
           <a class="reviews__write button" href="form.html">Оставить свой</a>
           <div class="reviews__list slider__list">
+            <!-- отзыв является цитатой автора, поэтому используем для этого семантичный тег <blockquote> -->
             <blockquote class="reviews__item slider__item">
-              <img
-                class="reviews__author-image"
-                src="img/picture-travis-mobile@1x.jpg"
-                width="50"
-                height="33"
-                alt="Фото Трэвиса Баркера"
-              />
+              <img class="reviews__author-image" src="img/travis-barker-mobile.jpg" width="50" height="50" alt="Фото Трэвиса Баркера"/>
               <div class="reviews__author-info">
                 <cite class="reviews__author-name">Трэвис Баркер</cite>
                 <p class="reviews__text">
@@ -250,19 +248,17 @@
             </button>
             <button class="reviews__next" type="button">Следующий отзыв</button>
           </div>
+          <!-- Добавим место для кнопок, которые будут переключать слайды. Почему не div? -->
           <p class="reviews__toggles slider__toggles">
-            <button
-              class="slider__toggle slider__toggle--current"
-              type="button"
-            >
-              1
-            </button>
+            <button class="slider__toggle slider__toggle--current" type="button">1</button>
             <button class="slider__toggle" type="button">2</button>
             <button class="slider__toggle" type="button">3</button>
           </p>
         </div>
       </section>
     </main>
+
+    <!-- Сразу добавим блок подвала, блок-центровщик и три элемента. Все элементы будут заниматься позиционированием блоков, которые будут в них помещены. -->
     <footer class="page-footer">
       <div class="page-footer__wrapper">
         <div class="page-footer__contacts contacts">
